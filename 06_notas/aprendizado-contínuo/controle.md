@@ -9,3 +9,4 @@
 - 2026-10-11T14:28:33-03:00 · task F1-T05 · capturado (candidato) · `06_notas/aprendizado-contínuo/AP-2026-10-11-1428-isolar-hooks-de-enriquecimento.md`
 - 2026-10-20T07:58:00-03:00 · task F1-T05 · capturado (candidato) · `06_notas/aprendizado-contínuo/AP-2026-10-20-0758-proteger-fixtures-na-edicao-de-tomador.md`
 - 2026-10-28T08:05:00-03:00 · task F1-T05 · capturado (candidato) · `06_notas/aprendizado-contínuo/AP-2026-10-28-0805-skip-qa-hook-path.md` · pipeline Skip: hook removido quebra QA de integrações; commit publicado pode divergir do commit homologado no QA.
+- 2026-10-28T09:07:00-03:00 · task F1-T05 · capturado (candidato) · `06_notas/aprendizado-contínuo/AP-2026-10-28-0907-prova-por-metadados-de-carga.md` · prova de carga real por metadados: logs de requisição provam gravação sem ler registros; conteúdo permanece invisível ao agente.

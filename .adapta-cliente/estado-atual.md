@@ -10,5 +10,5 @@
 - aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-28-0805-skip-qa-hook-path.md
 - ultima_acao: Marcela aprovou o teste humano da reversão em produção (0.0.35); STATUS, changelog, estado e aprendizado sincronizados no GitHub.
 - proxima_acao: Marcela confirmar a carga real dos cadastros mestres em produção (sem dados pessoais no chat); depois conferir listas e trilha e fechar F1-T05. Não iniciar F1-T06 antes do fechamento.
-- atualizado_em: 2026-10-28T11:06:30Z
+- atualizado_em: 2026-10-28T11:07:30Z
 - pendente_github: espelho da árvore de código (tela, serviço, hook, migrações e schema) segue pendente; este repositório é de governança e está sincronizado.

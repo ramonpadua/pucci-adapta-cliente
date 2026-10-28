@@ -1,5 +1,12 @@
 # Changelog — Pucci Ambiental · adapta-cliente
 
+## 2026-10-28 · [Marcela] · F1-T05: reversão da regra S/N homologada em produção
+- Teste humano aprovado pela Champion em produção `0.0.35` (`65bbd7c`): campo vazio recusado e tentativa de reutilizar a fixture sintética `CONTRATO-SINTETICO-001` bloqueada como duplicado. Nenhum registro real criado no teste.
+- Regra vigente: número de contrato obrigatório e globalmente único, sem exceção para `S/N` (decisão de 2026-10-20). Migração `0011_f1_t05_contracts_unique_number` aplicada; índice ativo `idx_contracts_number` sem filtro; hook mantido no caminho exigido pelo QA apenas para exigir/aparar o número.
+- QA da publicação: setup, análise estática, build e integrações passaram; `test.ran=false`. Testes sintéticos em SQLite confirmaram vazio recusado, `S/N` duplicado recusado e número oficial duplicado recusado.
+- Nenhum contrato real foi lido, criado, apagado ou renumerado pelo agente. Espelho de código no GitHub segue pendente (repositório de governança, sem checkout autenticado).
+- Próxima ação: Marcela confirmar a carga real dos cadastros mestres em produção; depois conferir listas e trilha e fechar F1-T05. Não iniciar F1-T06 antes do fechamento formal.
+
 ## 2026-10-20 · [Marcela] · DEBUG F1-T05: cadastro de contrato não salvo
 - Logs de produção mostram 13 tentativas POST para criação em `contracts` rejeitadas com HTTP 400 entre 11:12 e 11:17 (horário local). Os logs não incluem o erro de validação por campo nem o payload; nenhum contrato real foi consultado pelo agente.
 - Evidência de código/configuração: formulário só envia quando `contract_number`, projeto e tomador têm valor; a coleção exige `contract_number` e tem índice único. O log não prova se houve duplicidade ou outra falha de validação.

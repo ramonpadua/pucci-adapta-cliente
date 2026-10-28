@@ -7,3 +7,5 @@
 - 2026-09-24T10:02:00-03:00 · task F1-T04 · capturado · `06_notas/aprendizado-contínuo/AP-2026-09-24-1002-instrumentacao-nao-e-baseline.md`
 - 2026-10-09T16:21:16-03:00 · task F1-T05 · capturado (candidato) · `06_notas/aprendizado-contínuo/AP-2026-10-09-1621-ordenar-schema-e-hooks-skip.md`
 - 2026-10-11T14:28:33-03:00 · task F1-T05 · capturado (candidato) · `06_notas/aprendizado-contínuo/AP-2026-10-11-1428-isolar-hooks-de-enriquecimento.md`
+- 2026-10-20T07:58:00-03:00 · task F1-T05 · capturado (candidato) · `06_notas/aprendizado-contínuo/AP-2026-10-20-0758-proteger-fixtures-na-edicao-de-tomador.md`
+- 2026-10-28T08:05:00-03:00 · task F1-T05 · capturado (candidato) · `06_notas/aprendizado-contínuo/AP-2026-10-28-0805-skip-qa-hook-path.md` · pipeline Skip: hook removido quebra QA de integrações; commit publicado pode divergir do commit homologado no QA.

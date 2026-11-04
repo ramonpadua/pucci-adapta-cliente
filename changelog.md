@@ -1,5 +1,15 @@
 # Changelog — Pucci Ambiental · adapta-cliente
 
+## 2026-10-29 · [Marcela] · F1-T05A concluída: edição de contratos e exclusão de projeto homologadas
+- Teste humano concluído em produção `0.0.39` (`e97fc64`): edição de contrato real aprovada pela Champion com toast de sucesso confirmado; exclusão do projeto solicitado provada por logs (DELETE → 204 em 28/10 19:35) — a confirmação não aparecia na tela (defeito de feedback corrigido no `0.0.37`); as recusas que a Champion enfrentou eram de outro projeto com contrato vinculado (proteção correta, mensagem clara publicada no `0.0.39`).
+- Escopo entregue: `contractService.update` com tradução de número duplicado; diálogos de edição de contrato e de projeto (pré-preenchidos, status preservado, confirmação ao descartar, alvos min-h-11); ações Editar (contratos) e Editar/Excluir (projetos) em Cadastros mestres com confirmação explícita de exclusão; fixtures sintéticas protegidas (`SYN-`, `CONTRATO-SINTETICO-`, `CNPJ-SINTETICO-`); mensagem clara e toast de erro quando projeto tem contrato vinculado; hook `contract_number_normalize.js` preservado no caminho original.
+- QA: `0.0.36` (`e064bdc`) e `0.0.39` passaram em setup, análise estática, build e integrações (`test.ran=false`); `0.0.38` falhou (import duplicado) e foi corrigido antes de publicar. Ref publicada = ref homologada em todas as publicações (conferência pós-publicação AP-2026-10-28-0805).
+- Feedback visível onde o olho está: toasts de sucesso e de erro globais (Sonner) além dos Alerts fixos.
+- Nenhum registro real foi lido pelo agente em todo o ciclo; exclusão e recusas provadas por metadados de logs (método, caminho, status).
+- Decisão pendente da Champion: contratos seguem sem botão Excluir (fora do escopo autorizado).
+- Aprendizados capturados: feedback junto à ação (toast) e tradução de erro confirmada no texto real do provedor ("required relation reference").
+- Fase 1: 5/8 tasks concluídas + F1-T05A executada como ajuste pós-carga. Próxima: F1-T06.
+
 ## 2026-10-28 · [Marcela] · F1-T05 concluída: reversão homologada + carga real confirmada
 - Teste humano aprovado pela Champion em produção `0.0.35` (`65bbd7c`): campo vazio recusado e tentativa de reutilizar a fixture sintética `CONTRATO-SINTETICO-001` bloqueada como duplicado. Nenhum registro real criado no teste.
 - Regra vigente: número de contrato obrigatório e globalmente único, sem exceção para `S/N` (decisão de 2026-10-20). Migração `0011_f1_t05_contracts_unique_number` aplicada; índice ativo `idx_contracts_number` sem filtro; hook mantido no caminho exigido pelo QA apenas para exigir/aparar o número.
